@@ -1,4 +1,4 @@
-package com.ia89.crazy;
+package test.ia89.tests;
 
 import java.net.URI;
 

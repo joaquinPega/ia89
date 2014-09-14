@@ -16,8 +16,6 @@ import javax.tools.JavaCompiler.CompilationTask;
 import javax.tools.JavaFileObject;
 import javax.tools.ToolProvider;
 
-import com.ia89.crazy.JavaSourceFromString;
-
 public class FirstTest {
 
 	public static void main(String[] args) throws IOException,
@@ -56,7 +54,8 @@ public class FirstTest {
 		}
 		System.out.println("Success: " + success);
 		if (success) {
-			try {
+			Runtime.getRuntime().exec("java test.ia89.tests.Hello");
+			/*try {
 				Class<?> noparams[] = {};
 				Class<?> c = Class.forName("test.ia89.tests.Hello");
 //				Object obj = c.newInstance();
@@ -64,7 +63,7 @@ public class FirstTest {
 //				m.invoke(obj, null);
 			} catch (ClassNotFoundException e) {
 				System.err.println("Class not found: " + e);
-			} 
+			} */
 		}
 	}
 
